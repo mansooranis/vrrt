@@ -10,7 +10,7 @@ function App() {
   const count = useSelector((state) => state.counter.value);
   return (
     <>
-      <div>
+      <div className='flex flex-row justify-center'>
         <a href="https://vitejs.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
         </a>
