@@ -1,7 +1,7 @@
 {
   "name": "vrrt",
   "private": false,
-  "version": "0.0.6",
+  "version": "0.0.7",
   "bin": "./bin/generate-app.js",
   "type": "module",
   "author": "Mansoor Anis",
