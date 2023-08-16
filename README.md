@@ -14,10 +14,12 @@ npm i -g vrrt@latest
 ```
 ```bash
 npx vrrt <project-name>
-```
-```bash
 cd <project-name>
-npm i && npm run dev
+```
+`Suggested to use yarn now`
+```bash
+yarn
+yarn dev
 ```
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
