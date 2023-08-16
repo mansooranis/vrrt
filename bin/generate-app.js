@@ -7,7 +7,7 @@ import fs from 'fs';
 if (process.argv.length < 3) {
     console.log('You have to provide a name to your app.');
     console.log('For example :');
-    console.log('    npx create-my-boilerplate my-app');
+    console.log('    npx vrrt my-app');
     process.exit(1);
 }
 
@@ -35,11 +35,11 @@ try {
 
       console.log('Installing dependencies...');
 
-      console.log('Removing useless files');
+      console.log('Removing unused files...');
       execSync('npm i rimraf')
       execSync('npx rimraf ./.git');
       execSync('npm uninstall rimraf')
-      fs.rmdirSync(path.join(projectPath, 'bin'), { recursive: true});
+      fs.rm(path.join(projectPath, 'bin'), { recursive: true});
 
       console.log('The installation is done, this is ready to use !');
 
