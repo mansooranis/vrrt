@@ -39,9 +39,16 @@ try {
       execSync('npm i rimraf')
       execSync('npx rimraf ./.git');
       execSync('npm uninstall rimraf')
-      fs.rm(path.join(projectPath, 'bin'), { recursive: true});
+      fs.rm(path.join(projectPath, 'bin'), { recursive: true}, async (err) => {
+        if (err) {
+          console.log(err);
+          return;
+        };
+      });
 
       console.log('The installation is done, this is ready to use !');
+      console.log(`To use the application cd ${projectName}`);
+      console.log('run yarn && yarn dev')
 
     } catch (error) {
       console.log(error);
